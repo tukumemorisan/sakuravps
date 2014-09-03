@@ -1,7 +1,7 @@
 #sakuravps
 
 さくらVPSの初期設定を作成したChefのデータです。  
-WindowsCygwinの環境で、TUKUMEMO.COMが作成しました。
+Windows Cygwin環境で、TUKUMEMO.COMが作成しました。  
 
 ##内容
 
