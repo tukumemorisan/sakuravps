@@ -1,0 +1,7 @@
+{
+    "id":"vuser",
+    "name":"vuser",
+    "password":"$1$8kBaRzfA$HXMP3ZDpa66VpTIL69BGE1",
+    "gid":5000,
+    "uid":5000
+}

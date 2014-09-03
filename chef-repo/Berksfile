@@ -1,0 +1,7 @@
+source "https://supermarket.getchef.com/"
+
+cookbook 'sudo'
+cookbook 'simple_iptables'
+cookbook 'mysql'
+cookbook 'database', '~> 2.2.0'
+

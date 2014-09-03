@@ -1,0 +1,25 @@
+# Use name-based virtual hosting.
+#
+NameVirtualHost *:80
+#
+# NOTE: NameVirtualHost cannot be used without a port specifier 
+# (e.g. :80) if mod_ssl is being used, due to the nature of the
+# SSL protocol.
+#
+
+#
+# VirtualHost example:
+# Almost any Apache directive may go into a VirtualHost container.
+# The first VirtualHost section is used for requests without a known
+# server name.
+#
+
+<% @sites.each do |site| %>
+<VirtualHost *:80>
+    ServerAdmin webmaster@<%= site %>
+    DocumentRoot /var/www/html/<%= site %>
+    ServerName <%= site %>
+    ErrorLog logs/<%= site %>-error_log
+    CustomLog logs/<%= site %>-access_log common
+</VirtualHost>
+<% end %>

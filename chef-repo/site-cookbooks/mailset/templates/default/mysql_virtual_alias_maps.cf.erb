@@ -1,0 +1,7 @@
+user = <%= node["mailset"]["postfixadmindbuser"] %>
+password = <%= node["mailset"]["postfixadmindbpasswd"] %>
+hosts = localhost
+dbname = <%= node["mailset"]["postfixadmindbname"] %>
+table = alias
+select_field = goto
+where_field = address

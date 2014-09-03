@@ -1,0 +1,7 @@
+user = <%= node["mailset"]["postfixadmindbuser"] %>
+password = <%= node["mailset"]["postfixadmindbpasswd"] %>
+hosts = localhost
+dbname = <%= node["mailset"]["postfixadmindbname"] %>
+table = domain
+select_field = domain
+where_field = domain

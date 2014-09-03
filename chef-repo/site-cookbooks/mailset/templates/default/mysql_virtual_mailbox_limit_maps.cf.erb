@@ -1,0 +1,7 @@
+user = <%= node["mailset"]["postfixadmindbuser"] %>
+password = <%= node["mailset"]["postfixadmindbpasswd"] %>
+hosts = localhost
+dbname = <%= node["mailset"]["postfixadmindbname"] %>
+table = mailbox
+select_field = quota
+where_field = username

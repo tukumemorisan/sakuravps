@@ -1,0 +1,47 @@
+{
+  "run_list": [
+    "recipe[users]",
+    "recipe[ssh]",
+    "recipe[sudo]",
+    "recipe[simple_iptables]",
+    "recipe[myiptables]",
+    "recipe[httpd]",
+    "recipe[php55]",
+    "recipe[mysql::client]",
+    "recipe[mysql::server]",
+    "recipe[database::mysql]",
+    "recipe[mysqlset]",
+    "recipe[mailset]"
+  ],
+  "mailset": {
+    "postfixadmindir": "/var/www/html/exmaple.com/postfix",
+    "postfixadmindbuser": "postfix",
+    "postfixadmindbname": "postfix",
+    "postfixadmindbpasswd": "postfix",
+    "postfixadmindirectory":"vuser",
+    "postfixallowip":"000.000.000.000",
+    "postfixhtpasswd":"morisan:5elc13aaro3kk"
+  },
+  "mysql":{
+    "version": "5.6",
+    "server_root_password":"morisan",
+    "server_debian_password":"morisan",
+    "server_repl_password":"morisan",
+    "allow_remote_root":true,
+    "remove_anonymous_users": false,
+    "remove_test_database": false,
+    "data_dir":"/var/lib/mysql"
+  },
+  "authorization": {
+      "sudo": {
+        "groups": ["wheel"],
+        "passwordless": "true"
+      }
+  },
+  "ssh": {
+    "port":61234
+  },
+  "automatic": {
+    "ipaddress": "153.120.3.235"
+  }
+}

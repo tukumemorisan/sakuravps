@@ -1,0 +1,12 @@
+<Files ~ "^\.(htaccess|htpasswd)$">
+deny from all
+</Files>
+Options -Indexes
+AuthUserFile <%= node["mailset"]["postfixadmindir"] %>/.htpasswd
+AuthGroupFile /dev/null
+AuthName "Please enter your ID and password"
+AuthType Basic
+require valid-user 
+order deny,allow
+allow from <%= node["mailset"]["postfixallowip"] %>
+deny from all 
